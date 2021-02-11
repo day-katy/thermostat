@@ -39,6 +39,18 @@ button:hover {
   background: #41aea9;
 }
 
+.low-usage {
+  color: green;
+}
+
+.medium-usage {
+  color: black;
+}
+
+.high-usage {
+  color: red;
+}
+
 h4 {
   text-align: center;
   color: #41aea9;
