@@ -6,6 +6,8 @@ class Thermostat {
     this.MINIMUM_TEMPERATURE = 10
     this.MAXIMUM_TEMPERATURE_PS = 25
     this.MAXIMUM_TEMPERATURE_NPS = 32
+    this.MEDIUM_ENERGY_LIMIT = 18
+    this.HIGH_ENERGY_LIMIT = 25
     this.powerSavingMode = true
     this._currentTemperature = this.DEFAULT_TEMPERATURE
   }
@@ -47,6 +49,20 @@ class Thermostat {
 
   switchOnPowerSaving(){
     return this.powerSavingMode = true
+  }
+
+  resetTemperature(){
+    return this._currentTemperature = this.DEFAULT_TEMPERATURE
+  }
+
+  energyUsage() {
+    if (this._currentTemperature < this.MEDIUM_ENERGY_LIMIT) {
+      return "low-usage";
+    }
+    if (this._currentTemperature <= this.HIGH_ENERGY_LIMIT) {
+      return "medium-usage";
+    }
+    return "high-usage";
   }
 }
 
