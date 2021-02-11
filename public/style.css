@@ -51,6 +51,12 @@ button:hover {
   color: red;
 }
 
+h3 {
+  text-align: center;
+  color: #41aea9;
+  border: 1px solid #214252;
+  border-radius: 40px;
+}
 h4 {
   text-align: center;
   color: #41aea9;
