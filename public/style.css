@@ -1,0 +1,73 @@
+h1 {
+  color: #214252;
+  font-size: 48px;
+  font-weight: 100;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 20px;
+  border: 1px solid #214252;
+  border-radius: 4px;
+}
+h2 {
+  color: #e8ffff;
+  text-align: center;
+  font-weight: normal;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 0px;
+}
+
+body {
+  background-color: #214252;
+}
+
+button {
+  color: #ebebeb;
+  font-size: 18px;
+  background: transparent;
+  display: block;
+  margin: 0 auto 30px auto;
+  padding: 15px 30px;
+  border-radius: 40px;
+  box-shadow: 5px 5px 5px #41aea9;
+  border-color: #41aea9;
+  transition: all 200ms ease-in-out;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+button:hover {
+  cursor: pointer;
+  color: white;
+  background: #41aea9;
+}
+
+h4 {
+  text-align: center;
+  color: #41aea9;
+}
+hr {
+  display: block;
+  unicode-bidi: isolate;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+}
+
+.thermostat-challenge {
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+  background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+  border-radius: 10px;
+  color: #fff;
+  width: 50%;
+  padding: 30px;
+  margin: 30px auto;
+  font-family: "Cerebri Sans", Helvetica, Arial, sans-serif;
+}
+.thermostat-challenge img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  max-width: 80%;
+}
