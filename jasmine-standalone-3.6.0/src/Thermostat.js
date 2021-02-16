@@ -22,7 +22,7 @@ class Thermostat {
       this._currentTemperature += 1
       }
       else{
-        alert("Maximum power saving temperature reached")
+        alert("Maximum PSM temperature reached")
       }
     }
     else {
@@ -30,7 +30,7 @@ class Thermostat {
       this._currentTemperature += 1
     }
     else{
-      alert("Maximum temperature reached")
+      alert("Maximum non-PSM temperature reached")
     }
     }
   }

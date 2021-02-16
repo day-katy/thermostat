@@ -32,13 +32,13 @@ describe("Thermostat", function() {
     expect(thermostat._currentTemperature).toEqual(10)
   })
 
-  // it("alerts if minimum temp is reached", function () {
-  //   for (let i = 0; i < 11; i++){
-  //     thermostat.decreaseTemperature();
-  //   }
-  //   spyOn(window, "alert");
-  //   expect(window.alert).toHaveBeenCalledWith()
-  //   })
+  it("alerts if minimum temp is reached", function () {
+    spyOn(window, "alert");
+    for (let i = 0; i < 11; i++){
+      thermostat.decreaseTemperature();
+    }
+    expect(window.alert).toHaveBeenCalled()
+    })
 
 
   it("cannot go above 25 in default PS mode", function() {
@@ -47,6 +47,14 @@ describe("Thermostat", function() {
     }
     expect(thermostat.currentTemperature).toEqual(25)
   })
+
+  it("alerts if maximum PSM temp is reached", function () {
+    spyOn(window, "alert");
+    for (let i = 0; i < 6; i++) {
+      thermostat.increaseTemperature();
+    }
+    expect(window.alert).toHaveBeenCalled()
+    })
 
   it("has power saving mode as the default", function() {
     expect(thermostat.isPowerSaving()).toEqual(true)
@@ -71,6 +79,14 @@ describe("Thermostat", function() {
     }
     expect(thermostat.currentTemperature).toEqual(32)
   })
+
+  it("alerts if maximum non-PSM temp is reached", function () {
+    spyOn(window, "alert");
+    for ( let i = 0; i < 13; i++) {
+      thermostat.increaseTemperature();
+    }
+    expect(window.alert).toHaveBeenCalled()
+    })
 
   it("can reset the temperature to default temperature of 20", function() {
     thermostat.resetTemperature()
