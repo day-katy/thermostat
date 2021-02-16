@@ -5,6 +5,7 @@ describe("Thermostat", function() {
 
   beforeEach(function() {
     thermostat = new Thermostat();
+     spyOn(window, "alert");
   });
 
   it("should return a default temperature of 20", function() {
@@ -33,7 +34,7 @@ describe("Thermostat", function() {
   })
 
   it("alerts if minimum temp is reached", function () {
-    spyOn(window, "alert");
+    // spyOn(window, "alert");
     for (let i = 0; i < 11; i++){
       thermostat.decreaseTemperature();
     }
@@ -49,7 +50,7 @@ describe("Thermostat", function() {
   })
 
   it("alerts if maximum PSM temp is reached", function () {
-    spyOn(window, "alert");
+    // spyOn(window, "alert");
     for (let i = 0; i < 6; i++) {
       thermostat.increaseTemperature();
     }
@@ -81,7 +82,7 @@ describe("Thermostat", function() {
   })
 
   it("alerts if maximum non-PSM temp is reached", function () {
-    spyOn(window, "alert");
+    // spyOn(window, "alert");
     for ( let i = 0; i < 13; i++) {
       thermostat.increaseTemperature();
     }
